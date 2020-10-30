@@ -10,3 +10,21 @@
 .h3{
     font-size: small;
 }
+
+.featimg {
+    display: block;
+    max-height: 400px;
+    max-width: 400px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.facts {
+    max-width: 300px;
+    max-height: 75px;
+    font-size: 10px
+}
+
+.hemis_ {
+    align-content: center;
+}

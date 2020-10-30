@@ -26,35 +26,28 @@
     </div>
   </div>
 
-    <!-- Mars Data -->
-    <div class="row" id="mars_facts">
-      <div class="col-md-3" >
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Date Posted</th>
-              <th scope="col">Headline</th>
-              <th scope="col">Neighborhood</th>
-              <th scope="col">Price</th>
-            </tr>
-          </thead>
-          <tbody>
-
-            <!-- Within the table body, create a new table row (<tr>) for each player in our database. -->
-            {% for listing in listing_results %}
-            <tr>
-              <td>{{ listing.date }}</td>
-              <td>{{ listing.headline }}</td>
-              <td>{{ listing.hood }}</td>
-              <td>{{ listing.price }}</td>
-            </tr>
-            {% endfor %}
-
-          </tbody>
-        </table>
-      </div>
+  <div class = "row">
+    <div class="container-fluid col-md-6">
+      <img src="{{mars_app.featured_image_url}}" class="img-fluid">
     </div>
-
+ 
+    <div class="container-fluid col-md-5">
+        <h2 class = "h2">Mars Facts</h2>
+        <div class="table table-striped facts">
+            {{ mars_app.mars_facts|safe}}
+    </div>
+  </div> 
+  </div>
+  <div class="row">
+    <div class = "container-fluid">
+    {% for dict in mars_app.hemisphere_image_urls %}
+      <div class = "col-md-6">
+            <img src="{{dict.img_url}}" alt="Landing Pg Visualization" class="img2">
+              <p class = "h2">{{dict.title}}</p>
+      </div>
+    {% endfor %}
+    </div>
+    </div>
   </div>
 </body>
 
