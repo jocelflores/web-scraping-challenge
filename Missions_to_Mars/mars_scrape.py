@@ -93,7 +93,7 @@ def scrape():
     hemisphere_image_urls = []
     url_site3 = browser.find_by_css("a.product-item h3")
 
-    for urls in range(len(url_site3)):
+    for item in range(len(url_site3)):
 
         browser.find_by_css("a.product-item h3").click()
         elm = browser.find_link_by_text("Sample").first
@@ -102,7 +102,7 @@ def scrape():
         hemisphere_image_urls.append({'title':title, 'img_url': img_url})
         
         browser.back()
-
+    next
     print(hemisphere_image_urls)
     browser.quit()
 

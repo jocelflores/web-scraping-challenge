@@ -38,11 +38,11 @@
     </div>
   </div> 
   </div>
-  <div class="row">
-    <div class = "container-fluid">
+  <div class = "container-fluid">
+    <div class="row">
     {% for dict in mars_app.hemisphere_image_urls %}
-      <div class = "col-md-6">
-            <img src="{{dict.img_url}}" alt="Landing Pg Visualization" class="img2">
+      <div class = "col-md-3 hemis_">
+            <img class = "card-img-top" src="{{dict.img_url}}" alt="Landing Pg Visualization" class="hemis_ img-fluid">
               <p class = "h2">{{dict.title}}</p>
       </div>
     {% endfor %}

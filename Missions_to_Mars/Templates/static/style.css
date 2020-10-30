@@ -26,5 +26,11 @@
 }
 
 .hemis_ {
-    align-content: center;
+    display: block;
+    max-width: 400px;
+    max-height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    margin-top: 50px;
 }
